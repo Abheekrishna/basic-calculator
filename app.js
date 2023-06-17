@@ -4,6 +4,29 @@ const equalBtn = document.querySelector('[data-equals]');
 const allClearBtn = document.querySelector('[data-all-clear]');
 const deleteBtn = document.querySelector('[data-delete]');
 
+const audio = new Audio('./audio/click.mp3');
+
+
+function toggleAudio() {
+    audio.currentTime = 0; // Reset audio to the beginning
+    audio.play();
+}
+
+numberBtns.forEach(button => {
+    button.addEventListener('click', toggleAudio)
+})
+
+operationBtns.forEach(button => {
+    button.addEventListener('click', toggleAudio)
+})
+
+equalBtn.addEventListener('click', toggleAudio)
+
+allClearBtn.addEventListener('click', toggleAudio)
+
+deleteBtn.addEventListener('click', toggleAudio)
+
+
 
 const add = (a, b) => {
     return parseFloat(a) + parseFloat(b);
