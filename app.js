@@ -7,6 +7,11 @@ const currentTextOperandDiv = document.querySelector('[data-currentTextNumber]')
 const previousTextOperandDiv = document.querySelector('[data-previousTextNumber]');
 
 
+
+const year = document.getElementById('year');
+const newYear = (new Date).getFullYear()
+year.innerText = `${newYear}`
+
 const audio = new Audio('./audio/click.mp3');
 
 
@@ -51,12 +56,26 @@ const divide = (a, b) => {
     }
 }
 
-numberBtns.forEach((button) => {
-    button.addEventListener('click', () => {
-        const numberString =  button.textContent.toString();
-        currentTextOperandDiv.innerText = numberString;
+const numberClick = () => {
+    numberBtns.forEach(button => {
+        button.addEventListener('click', () => {
+            return button.textContent;
+        })
     })
-})
+}
+
+const appendNumber = () => {
+    numberBtns.forEach(button => {
+        button.addEventListener('click', () => {
+            let numberString = button.textContent.toString();
+            currentTextOperandDiv.innerText = numberString;
+        })
+    })
+}
+appendNumber()
+
+
+
 
 allClearBtn.addEventListener('click', () => {
     currentTextOperandDiv.innerText = '';

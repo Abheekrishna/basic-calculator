@@ -10,6 +10,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 .btns > button {
     border: none;
@@ -88,4 +89,23 @@ body {
 }
 .btns > .two-space-all:hover {
     background-color: rgb(255, 71, 71);
+}
+
+.footer-title {
+    color: rgb(47, 47, 47);
+}
+a {
+    color: rgb(47, 47, 47);
+}
+.fa-github {
+    transition: all 0.4s ease-in-out;
+}
+
+.fa-github:hover {
+    transform: scale(1.5) rotate(360deg);
+    margin-left: 5px;
+    margin-right: 5px;
+}
+footer {
+    margin-top: 50px;
 }
