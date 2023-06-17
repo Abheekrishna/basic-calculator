@@ -3,12 +3,15 @@ const operationBtns = document.querySelectorAll('[data-operation]');
 const equalBtn = document.querySelector('[data-equals]');
 const allClearBtn = document.querySelector('[data-all-clear]');
 const deleteBtn = document.querySelector('[data-delete]');
+const currentTextOperandDiv = document.querySelector('[data-currentTextNumber]');
+const previousTextOperandDiv = document.querySelector('[data-previousTextNumber]');
+
 
 const audio = new Audio('./audio/click.mp3');
 
 
 function toggleAudio() {
-    audio.currentTime = 0; // Reset audio to the beginning
+    audio.currentTime = 0;
     audio.play();
 }
 
@@ -47,3 +50,15 @@ const divide = (a, b) => {
         return parseFloat(a) / parseFloat(b);
     }
 }
+
+numberBtns.forEach((button) => {
+    button.addEventListener('click', () => {
+        const numberString =  button.textContent.toString();
+        currentTextOperandDiv.innerText = numberString;
+    })
+})
+
+allClearBtn.addEventListener('click', () => {
+    currentTextOperandDiv.innerText = '';
+    previousTextOperandDiv.innerText = '';
+})

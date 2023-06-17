@@ -76,3 +76,16 @@ body {
     margin-top: 0;
     font-size: 2.5rem;
 }
+
+.btns > .equal {
+    background-color: rgb(56, 73, 255);
+}
+.btns > .equal:hover {
+    background-color: rgb(74, 89, 255)
+}
+.btns > .two-space-all {
+    background-color: rgb(255, 56, 56);
+}
+.btns > .two-space-all:hover {
+    background-color: rgb(255, 71, 71);
+}
