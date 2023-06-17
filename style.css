@@ -6,13 +6,18 @@ body {
     -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important; 
     outline: none !important;
 }
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .btns > button {
     border: none;
     border-radius: 10px;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     background-color: rgb(89, 89, 89);
     color: white;
-    box-shadow: 2px 8px 0 rgb(34, 34, 34);
+    box-shadow: 0px 10px 0 rgb(34, 34, 34);
     cursor: pointer;
     transition: all 0.1s ease-in-out;
 }
