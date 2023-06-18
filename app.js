@@ -68,9 +68,7 @@ let entererNumber = '';
 const appendNumber = () => {
     
     numberBtns.forEach(button => {
-        button.addEventListener('click', (e) => {
-            console.log(e.target)
-            
+        button.addEventListener('click', (e) => {           
             entererNumber = entererNumber + e.target.innerHTML;
             currentTextOperandDiv.innerText = entererNumber;
         })
