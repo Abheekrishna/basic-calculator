@@ -20,7 +20,7 @@ body {
     font-size: 1.5rem;
     background-color: rgb(89, 89, 89);
     color: white;
-    box-shadow: 0px 6px 0 4px rgba(34, 34, 34, 0.5);
+    box-shadow: 0px 6px 0 4px rgba(79, 79, 79, 0.5);
     cursor: pointer;
     transition: all 0.1s ease-in-out;
 }
@@ -38,6 +38,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 15px;
+    padding-bottom: 25px;
     border: none;
     border-radius: 15px;
     box-shadow: 0 6px 0 5px rgba(21, 21, 21, 0.8) ;
@@ -83,12 +84,14 @@ body {
 
 .btns > .equal {
     background-color: rgb(56, 73, 255);
+    box-shadow: 0px 6px 0 4px rgba(56, 73, 255, 0.5);
 }
 .btns > .equal:hover {
     background-color: rgb(74, 89, 255)
 }
 .btns > .two-space-all {
     background-color: rgb(255, 56, 56);
+    box-shadow: 0px 6px 0 4px rgba(255, 38, 38, 0.5);
 }
 .btns > .two-space-all:hover {
     background-color: rgb(255, 71, 71);
