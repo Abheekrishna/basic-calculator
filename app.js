@@ -64,11 +64,14 @@ const numberClick = () => {
     })
 }
 
+let entererNumber = '';
+
 const appendNumber = () => {
     numberBtns.forEach(button => {
-        button.addEventListener('click', () => {
-            let numberString = button.textContent.toString();
-            currentTextOperandDiv.innerText = numberString;
+        button.addEventListener('click', (e) => {
+            console.log(e.target)
+            entererNumber = entererNumber + e.target.innerHTML;
+            currentTextOperandDiv.innerText = entererNumber;
         })
     })
 }

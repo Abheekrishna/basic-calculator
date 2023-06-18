@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -108,4 +110,7 @@ a {
 }
 footer {
     margin-top: 50px;
+}
+.output {
+    font-family: 'Orbitron', sans-serif;
 }
