@@ -65,7 +65,7 @@ const numberClick = () => {
 }
 let entererNumber = '';
 
-const appendNumber = () => {
+const getNumber = () => {
     
     numberBtns.forEach(button => {
         button.addEventListener('click', (e) => {           
@@ -74,9 +74,21 @@ const appendNumber = () => {
         })
     })
 }
-appendNumber()
+getNumber()
 
-
+const getOperation = () => {
+    operationBtns.forEach(operation => {
+        operation.addEventListener('click', (e) => {
+            if(currentTextOperandDiv.length === 0) {
+                return;
+            } else {
+                previousTextOperandDiv.innerText = `${currentTextOperandDiv}`;
+                currentTextOperandDiv.innerText = e.target.innerText;
+            }
+        })
+    })
+}
+getOperation()
 
 
 allClearBtn.addEventListener('click', () => {
