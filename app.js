@@ -86,3 +86,20 @@ const mathOperation = () => {
         result = parseFloat(result) + parseFloat(currentNumber);
     }
 } 
+
+equalBtn.addEventListener('click', (e) => {
+    if(!currentNumber || !previousNumber) return;
+    haveDot = false;
+    mathOperation();
+    clear();
+    currentTextOperandDiv.innerText = result;
+    
+})
+
+allClearBtn.addEventListener('click', () => {
+    currentNumber = '';
+    previousNumber = '';
+    currentTextOperandDiv.innerText = '';
+    previousTextOperandDiv.innerText = '';
+    lastOperation = '';
+})
