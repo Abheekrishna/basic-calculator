@@ -64,12 +64,25 @@ operationBtns.forEach(operation => {
             result = parseFloat(currentNumber);
         }
         clear(operationName);
+        lastOperation = operationName;
     })
 })
 
 const clear = (name = '') => {
-    currentNumber = `${currentNumber} ${name}`
-    previousTextOperandDiv.innerText = currentNumber;
+    previousNumber += `${currentNumber} ${name}`
+    previousTextOperandDiv.innerText = previousNumber;
     currentTextOperandDiv.innerText = '';
     currentNumber = '';
 }
+
+const mathOperation = () => {
+    if(lastOperation === '*') {
+        result = parseFloat(result) * parseFloat(currentNumber);
+    } else if (lastOperation === '+') {
+        result = parseFloat(result) + parseFloat(currentNumber);
+    } else if (lastOperation === '-') {
+        result = parseFloat(result) - parseFloat(currentNumber);
+    } else if (lastOperation == '/') {
+        result = parseFloat(result) + parseFloat(currentNumber);
+    }
+} 
