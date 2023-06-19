@@ -136,6 +136,9 @@ footer {
     }
     .output {
         width: 200px;
-        height: 80px;
+        min-height: 80px;
+    }
+    footer {
+        font-size: 0.75rem;
     }
   }
