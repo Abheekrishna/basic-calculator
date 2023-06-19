@@ -83,7 +83,7 @@ const mathOperation = () => {
     } else if (lastOperation === '-') {
         result = parseFloat(result) - parseFloat(currentNumber);
     } else if (lastOperation == '/') {
-        result = parseFloat(result) + parseFloat(currentNumber);
+        result = parseFloat(result) / parseFloat(currentNumber);
     }
 } 
 
