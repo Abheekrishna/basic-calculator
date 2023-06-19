@@ -63,7 +63,8 @@ body {
     box-shadow: 0px 2px 10px 2px rgba(0, 35, 0, 0.6) inset;
     color: rgb(51, 51, 51);
     width: 280px;
-    height: 100px;
+    min-height: 100px;
+    max-height: auto;
     border-radius: 15px;
     display: flex;
     align-items: flex-end;
