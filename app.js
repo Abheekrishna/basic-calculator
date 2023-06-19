@@ -70,4 +70,6 @@ operationBtns.forEach(operation => {
 const clear = (name = '') => {
     currentNumber = `${currentNumber} ${name}`
     previousTextOperandDiv.innerText = currentNumber;
+    currentTextOperandDiv.innerText = '';
+    currentNumber = '';
 }
