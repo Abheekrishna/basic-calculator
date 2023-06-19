@@ -46,7 +46,7 @@ body {
 .btns {
     display: grid;
     grid-template-columns: repeat(4, 80px);
-    grid-template-rows: repeat(5, 80px);
+    grid-template-rows: minmax(120px, auto)repeat(5, 80px);
     gap: 15px;
 }
 .two-space-all {
@@ -61,15 +61,13 @@ body {
     background-color: rgb(163, 235, 153);
     box-shadow: 0px 2px 10px 2px rgba(0, 35, 0, 0.6) inset;
     color: rgb(51, 51, 51);
-    width: 318px;
-    height: 100px;
-    display: flex;
-    padding: 0 25px;
-    flex-direction: column;
-    align-items: end;
-    justify-content: center;
-    margin-bottom: 15px;
+    width: 365px;
+    height: minmax(100px, auto);
     border-radius: 15px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .previousTextNumber {
     margin: 10px;
@@ -79,7 +77,9 @@ body {
 .currentTextNumber {
     margin: 10px;
     margin-top: 0;
-    font-size: 2.5rem;
+    font-size: 2rem;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
 .btns > .equal {
