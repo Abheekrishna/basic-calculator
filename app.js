@@ -35,64 +35,39 @@ allClearBtn.addEventListener('click', toggleAudio)
 deleteBtn.addEventListener('click', toggleAudio)
 
 
+let currentNumber = '';
+let previousNumber = '';
+let lastOperation = '';
+let result = null;
+let haveDot = false;
 
-const add = (a, b) => {
-    return parseFloat(a) + parseFloat(b);
-}
-
-const subtract = (a, b) => {
-    return parseFloat(a) - parseFloat(b);
-}
-
-const multiply = (a, b) => {
-    return parseFloat(a) * parseFloat(b);
-}
-
-const divide = (a, b) => {
-    if(a === 0 || b === 0) {
-        return;
-    } else {
-        return parseFloat(a) / parseFloat(b);
-    }
-}
-
-const numberClick = () => {
-    numberBtns.forEach(button => {
-        button.addEventListener('click', () => {
-            return button.textContent;
-        })
+numberBtns.forEach(number => {
+    number.addEventListener('click', (e) => {
+        if(e.target.innerText === '.' && !haveDot) {
+            haveDot = true;
+        } else if(e.target.innerText === '.' && haveDot) {
+            return;
+        }
+        currentNumber += e.target.innerText;
+        currentTextOperandDiv.innerText = currentNumber;
     })
-}
-let entererNumber = '';
-
-const getNumber = () => {
-    
-    numberBtns.forEach(button => {
-        button.addEventListener('click', (e) => {           
-            entererNumber = entererNumber + e.target.innerHTML;
-            currentTextOperandDiv.innerText = entererNumber;
-        })
-    })
-}
-getNumber()
-
-const getOperation = () => {
-    operationBtns.forEach(operation => {
-        operation.addEventListener('click', (e) => {
-            if(currentTextOperandDiv.length === 0) {
-                return;
-            } else {
-                previousTextOperandDiv.innerText = `${currentTextOperandDiv}`;
-                currentTextOperandDiv.innerText = e.target.innerText;
-            }
-        })
-    })
-}
-getOperation()
-
-
-allClearBtn.addEventListener('click', () => {
-    currentTextOperandDiv.innerText = '';
-    previousTextOperandDiv.innerText = '';
-    entererNumber = '';
 })
+
+operationBtns.forEach(operation => {
+    operation.addEventListener('click', (e) => {
+        if(!currentNumber) return;
+        haveDot = false;
+        const operationName = e.target.innerText;
+        if(currentNumber && previousNumber && lastOperation) {
+            mathOperation();
+        } else {
+            result = parseFloat(currentNumber);
+        }
+        clear(operationName);
+    })
+})
+
+const clear = (name = '') => {
+    currentNumber = `${currentNumber} ${name}`
+    previousTextOperandDiv.innerText = currentNumber;
+}
