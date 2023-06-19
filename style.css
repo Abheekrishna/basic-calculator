@@ -131,11 +131,11 @@ footer {
         margin-top: 50px;
     }
     .btns {
-        grid-template-columns: repeat(4, 40px);
-        grid-template-rows: repeat(5, 40px);
+        grid-template-columns: repeat(4, 60px);
+        grid-template-rows: repeat(5, 60px);
     }
     .output {
-        width: 200px;
+        width: 280px;
         min-height: 80px;
     }
     footer {
