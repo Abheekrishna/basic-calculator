@@ -103,3 +103,8 @@ allClearBtn.addEventListener('click', () => {
     previousTextOperandDiv.innerText = '';
     lastOperation = '';
 })
+
+deleteBtn.addEventListener('click', () => {
+    currentNumber = ''
+    currentTextOperandDiv.innerText = currentNumber.toString().slice(0, -1);
+})
