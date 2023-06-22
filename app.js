@@ -105,6 +105,6 @@ allClearBtn.addEventListener('click', () => {
 })
 
 deleteBtn.addEventListener('click', () => {
-    currentNumber = ''
-    currentTextOperandDiv.innerText = currentNumber.toString().slice(0, -1);
+    currentNumber = currentNumber.toString().slice(0, -1);
+    currentTextOperandDiv.innerText = currentNumber;
 })
